@@ -1,0 +1,10 @@
+@startuml class
+scale 400*400
+
+class MyClass {
+ -Object: myPrivateField
+ +Object: myPublicField
+ ~DoSomethingForMe()
+ +DoSomethingForAll()
+}
+@enduml

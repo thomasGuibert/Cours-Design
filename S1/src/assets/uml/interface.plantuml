@@ -1,0 +1,14 @@
+@startuml interface
+scale 400*400
+
+interface MyInterface {
+    +DoSomething()
+}
+
+class MyClass{
+    +DoSomething()
+}
+
+MyInterface .. MyClass
+
+@enduml

@@ -1,0 +1,6 @@
+@startuml composition
+scale 400*400
+
+MyClass1 *-- MyClass2
+
+@enduml

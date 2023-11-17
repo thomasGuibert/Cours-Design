@@ -1,0 +1,6 @@
+@startuml aggregation
+scale 400*400
+
+MyClass1 o-- MyClass2
+
+@enduml
