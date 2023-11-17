@@ -12,3 +12,8 @@ productivité
 
 
 loi de conway
+
+hardware vs software
+evolution
+
+from cleancode and clea archi

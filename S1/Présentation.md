@@ -11,6 +11,6 @@ class:
 
 - Nom, Prénom
 - Qu'avez-vous fait ces cinq dernières années ?
-- Pourquoi êtes-vous ici ? Quels sont vos motivations ?
+- Pourquoi êtes-vous ici ? Quelles sont vos motivations ?
 - Que faites vous sur votre temps libre ?
 - Une idée, une envie à partager ?
