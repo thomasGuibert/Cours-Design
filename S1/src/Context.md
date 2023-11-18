@@ -45,21 +45,15 @@ class:
 * Manque de méthodes et de rigueur
 * Mauvaise compréhension des besoins
 
- ---=
-
+ ---
  # Critères de qualité
-* **Validité** : réponse aux besoins des utilisateurs
-* **Facilité d'utilisation** : prise en main et robustesse
-* **Performance** : temps de réponse, débit, fluidité...
-* **Fiabilité** : tolérance aux pannes
-* **Sécurité** : intégrité des données et protection des accès
+* Validité : réponse aux besoins des utilisateurs
 * **Maintenabilité** : facilité à corriger ou transformer le logiciel
-* **Portabilité** : changement d'environnement matériel ou logiciel
+* Performance : temps de réponse, débit, fluidité...
 
 **hardware vs software**
 
- ---
-
+---
 # Modélisation du système
 
 * Organisation de l'entreprise
@@ -67,7 +61,6 @@ class:
 * Schéma de conception
 
  ---
-
  # Organisation de l'entreprise
 
 **Loi de conway**:
@@ -79,4 +72,3 @@ class:
 
 * Architecture logiciel
 * Modélisation de systèmes
-
