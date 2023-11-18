@@ -1,0 +1,27 @@
+@startuml
+hide footbox
+participant User
+
+User -> SearchBoxContainer: search album
+activate SearchBoxContainer
+SearchBoxContainer -> SearchBox: onSearch
+activate SearchBox
+SearchBox -> Search: unifiedSearch
+activate Search
+Search -> Search: getSelectedMetaProvider
+Search -> MetaProvider: searchForReleases
+activate MetaProvider
+MetaProvider -> MetaProviderServer: HttpRequest to get albums
+activate MetaProviderServer
+MetaProviderServer -> MetaProvider: MetaProviderReleaseSearchResponse
+deactivate MetaProviderServer
+
+MetaProvider -> MetaProvider: MetaProviderReleaseSearchResultToGeneric
+MetaProvider -> Search: SearchResultsAlbum
+deactivate MetaProvider
+Search -> Redux: createStandardAction ALBUM_SEARCH_SUCCESS
+deactivate Search
+deactivate SearchBox
+deactivate SearchBoxContainer
+
+@enduml
