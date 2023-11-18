@@ -159,7 +159,7 @@ package app {
         class Github
     }
 
-    package selector {
+    package selector{
         class connectivity
         class githubContrib
         class mastodon
@@ -204,7 +204,7 @@ package core {
         }
     }
     package ipc {
-        enum events
+        class events
     }
     package persistence {
         class store
@@ -243,8 +243,8 @@ package core {
         class streamProvider
         class transform
     }
-    package rest {
-        package nuclear {
+    package rest-core {
+        package nuclear-core {
             class Configuration
             class Identity
             class NuclearService
@@ -273,17 +273,13 @@ package core {
         class heuristics
     }
 
-    package settings {
-        class index
-    }
+    class settings
     package structs {
         class Album
         class Artist
         class Track
     }
-    package types {
-        class index
-    }
+    class types
     package util {
         class index
         class retry
