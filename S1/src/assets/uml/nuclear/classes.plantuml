@@ -15,8 +15,8 @@ package app {
         class mastodon
         class player
         class playlists
-        class plugins
-        class queue
+        class actionplugins
+        class actionqueue
         class scrobbling
         class search
         class settings
@@ -137,12 +137,12 @@ package app {
         class dashboard
         class githubContrib
         class lyrics
-        class plugins
+        class reducerplugins
         class tag
         class downloads
         class helpers
         class mastodon
-        class queue
+        class reducerqueue
         class toasts
         class equalizer
         class importfavs
@@ -168,7 +168,7 @@ package app {
         class dashboard
         class helpers
         class nuclear
-        class queue
+        class selectorqueue
         class downloads
         class importfavs
         class player
@@ -189,7 +189,7 @@ package app {
         class userPlugin
     }
 
-    class App
+    class App1
     class globals
     class index
 }
@@ -339,4 +339,39 @@ package main {
 package ui {
 
 }
+
+
+App1 o-- search
+App1 o-- player
+App1 o-- playlists
+App1 o-- actionplugins
+App1 o-- actionqueue
+App1 o-- settings
+App1 o-- scrobbling
+App1 o-- importfavs
+App1 o-- connectivity
+App1 o-- githubContrib
+App1 o-- window
+App1 o-- configuration
+PlayQueueContainer o-- hooks
+PlayQueueContainer o-- downloads
+PlayQueueContainer o-- favorites
+PlayQueueContainer o-- reducerqueue
+PlayQueueContainer o-- plugins
+PlayQueueContainer o-- playlists
+PlayQueueContainer o-- settings
+PlayQueueContainer o-- toasts
+PlayQueueContainer o-- player
+PlayQueueContainer o-- PlayQueue
+PlayQueue o-- reducerplugins
+connectivity -- actionTypes
+audius o-- metaProvider
+audius o-- Audius
+audius o-- Lastfm
+bandcamp o-- metaProvider
+bandcamp o-- plugins
+bandcamp o-- rest
+bandcamp o-- Track
+bandcamp o-- Lastfm
+
 @enduml
