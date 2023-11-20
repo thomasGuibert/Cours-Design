@@ -68,7 +68,14 @@ class:
 
  ---
 
- # Architecture des solutions et Schéma de conception
+ # Architectures logiciel
 
-* Architecture logiciel
-* Modélisation de systèmes
+* NTiers
+* MVC
+* Hexagonal
+
+--- 
+# Modélisation de systèmes
+   
+ * Principes SOLID
+ * Design pattern
