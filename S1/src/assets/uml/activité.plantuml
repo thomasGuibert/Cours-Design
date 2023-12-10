@@ -1,0 +1,12 @@
+@startuml class
+scale 400*400
+
+(*) --> "activité 1"
+--> "activité 2"
+if then
+--> "activité 3"
+--> (*)
+else
+--> "activité 4"
+--> (*)
+@enduml

@@ -39,6 +39,10 @@ class:
 ![img](./assets/uml/usecase.png)
 
  ---
+ # Activités
+![img](./assets/uml/activité.png)
+
+ ---
  # Classes: class
 ![img](./assets/uml/class.png)
 ```
