@@ -1,0 +1,33 @@
+@startuml machine à café
+scale 400*400
+
+(*) --> "Regarde les articles"
+--> "Essaie un article"
+if "Souhaite avoir un conseil"
+--> [oui]"Demande conseil à un vendeur"
+--> "Essaie un article"
+    if "Est un bon choix"
+    --> [oui]"Ajoute l'article à son panier"
+    --> "Regarde les articles"
+    else
+    --> [non]"Regarde les articles"
+    endif
+else
+--> [non]"Essaie un article"
+endif
+
+"Ajoute l'article à son panier" --> "Passe en caisse pour payer"
+--> "Demande une réduction"
+if "A une réduction"
+--> [oui] Paye les articles avec réduction
+--> (*)
+else
+--> [non] Paye les articles sans réduction
+--> (*)
+@enduml
+
+
+Un client souhaite acheter un vetement dans un magasin. 
+Il peut regarder et essayer les artices proposés.
+Il peut être conseillé pour un vendeur et voir avec ce dernier pour utiliser des bon de reduction. 
+Enfin, apres avoir selectionné un ou des articles, il peut les acheter aupres du vendeur.
