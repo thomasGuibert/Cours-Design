@@ -1,0 +1,45 @@
+@startuml transport
+scale 600*600
+
+class Bus {
+  string immatriculation
+  date miseEnService
+  date tempsDeService
+  int poids
+}
+
+class Carrosserie {
+  int poids
+  string couleur
+}
+
+class Roue {
+  int pression
+  int diamètre
+}
+
+class Siège {
+  string couleur
+}
+
+class Conducteur {
+  int numeroPermis
+}
+
+class Personne {
+  string nom
+  int age
+}
+
+class Lycéen {
+
+}
+
+Lycéen --|> Personne
+Conducteur --|> Personne
+Personne -- Bus
+Bus "1" o-- "1" Carrosserie
+Bus "1" o-- "6" Roue
+Bus "1" o-- "*" Siège
+
+@enduml

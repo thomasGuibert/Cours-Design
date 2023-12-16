@@ -1,0 +1,10 @@
+@startuml capitale
+scale 400*400
+
+
+class Pays {
+  Capitale capitale
+}
+
+Pays "1" *-- "1" Capitale
+@enduml

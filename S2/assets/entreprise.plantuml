@@ -1,0 +1,7 @@
+@startuml entreprise
+scale 600*600
+
+
+Entreprise "1" --o "*" Salarié
+Salarié "1 Chef" -- " * Subordonées" Salarié
+@enduml

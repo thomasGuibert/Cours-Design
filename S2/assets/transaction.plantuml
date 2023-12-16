@@ -1,0 +1,7 @@
+@startuml transaction
+scale 400*400
+
+
+Transaction <|-- Vente
+Transaction <|-- Achat
+@enduml

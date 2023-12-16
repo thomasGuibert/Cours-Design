@@ -7,73 +7,182 @@ class:
  ---
 Exercices: Diagrammes d'activités
 
- Un utilisateur souhaite se faire un café expresso à son gout. Il souhaiterias pouvoir configuer l'intensité de son café ainsi que choisir entre en un café court et un café long. La maintenance de la machinequ, quantité d'eau et de café grain suffisant, état du réservoir de marc à café) est à la charge de l'utilisateur.
+ Un utilisateur souhaite se faire un café expresso. Il souhaiterait pouvoir configuer l'intensité de son café ainsi que choisir entre en un café court et un café long. La maintenance de la machine, la quantité d'eau et de grain de café, état du réservoir de marc à café est à la charge de l'utilisateur.
+
+  ---
+Exercices: Pseudo code
+
+A partir du diagramme d'activités précedent, écrivons l'algo en pseudo code pour se servir un café expresso
 
   ---
 Exercices: Diagrammes d'activités
 
-Selectionnons un algo que vous avez réaliser précèdement et modélisons son activité.
+Sélectionnons un algo que vous avez réalisé précèdement et modélisons son activité.
 
  ---
 Exercices: Diagrammes d'activités
 
-Un client souhaite acheter un vetement dans un magasin. Il peut regarder et essayer les artices proposés. Il peut être conseillé par un vendeur et voir avec ce dernier pour avoir une reduction. Enfin, apres avoir selectionné un ou des articles, il peut les acheter aupres du vendeur.
+Un client souhaite acheter un vetement dans un magasin. Il peut regarder et essayer les artices proposés. Il peut être conseillé par un vendeur et voir en caisse pour avoir une réduction. Enfin, apres avoir sélectionné un ou des articles, il peut les acheter.
 
  ---
 Exercices: Diagrammes de classes
-Pour chaque exemple ci-dessous, indiquez si la relation présentée est une généralisation, une
-agrégation ou une association :
+Pour chaque exemple ci-dessous, indiquez si la relation présentée est une spécialisation, une agrégation, une composition ou une association :
+1. __Un pays a une capitale__
+
+ ---
+Diagrammes de classes: Un pays a une capitale
+=> __Composition__
+![img](./build/capitale.png)
+
+```
+class Pays(){
+  public capitale;
+  public Pays(){ this.capitale = new Capitale(); }
+}
+```
+
+ ---
+ Exercices: Diagrammes de classes
+Pour chaque exemple ci-dessous, indiquez si la relation présentée est une spécialisation, une agrégation, une composition ou une association :
+1. Un pays a une capitale
+2. __Une transaction boursière est un achat ou une vente__
+
+  ---
+Diagrammes de classes: Une transaction boursière est un achat ou une vente
+=> __Spécialisation__
+![img](./build/transaction.png)
+
+```
+class Transaction() { }
+class Achat() extends Transaction { }
+class Vente() extends Transaction { }
+```
+
+ ---
+ Exercices: Diagrammes de classes
+Pour chaque exemple ci-dessous, indiquez si la relation présentée est une généralisation, une agrégation ou une association :
+1. Un pays a une capitale
+2. Une transaction boursière est un achat ou une vente
+3. __Les fichiers contiennent des enregistrements__
+
+  ---
+Diagrammes de classes: Les fichiers contiennent des enregistrements
+=> __Agregation__
+![img](./build/enregistrement.png)
+
+```
+class Enregistrement() { }
+class Fichier(){
+  public Enregistrement[] enregistrements;
+  public Fichier(Enregistrement[] enregistrements){}
+}
+```
+
+ ---
+ Exercices: Diagrammes de classes
+Pour chaque exemple ci-dessous, indiquez si la relation présentée est une spécialisation, une agrégation, une composition ou une association :
+1. Un pays a une capitale
+2. Une transaction boursière est un achat ou une vente
+3. Les fichiers contiennent des enregistrements
+4. __Une personne utilise un langage de programmation dans un projet__
+
+  ---
+Diagrammes de classes: Une personne utilise un langage de programmation dans un projet
+=> __Association__
+![img](./build/langage.png)
+
+```
+class LangageDeProgrammation() { }
+class Personne(){
+  public CodeEn(LangageDeProgrammation langageDeProgrammation){}
+}
+```
+
+ ---
+ Exercices: Diagrammes de classes
+Pour chaque exemple ci-dessous, indiquez si la relation présentée est une spécialisation, une agrégation, une composition ou une association :
 1. Un pays a une capitale
 2. Une transaction boursière est un achat ou une vente
 3. Les fichiers contiennent des enregistrements
 4. Une personne utilise un langage de programmation dans un projet
-5. Les modems et les claviers sont des périphériques d’entrées/sorties 
+5. __Les souris et les claviers sont des périphériques qui ont des résistances__
+
+  ---
+Diagrammes de classes: Les souris et les claviers sont des périphériques qui ont des résistances
+=> __Spécialisation__ + __Composition__
+![img](./build/resistance.png)
+
+```
+class Périphérique() {
+  public Périphérique () { this.resistances.Add(new Résistance(),new Résistance(),new Résistance())}
+}
+class Souris() extends Périphérique {}
+class Clavier() extends Périphérique {}
+```
 
  ---
 Exercices: Diagrammes de classes
 
-Une librairie vend des livres, caractérisés par leur auteur et leur nombre de pages ; certains
-livres possèdent également d’autres caractéristiques : une fourchette des âges pour les livres
-pour enfants, et la discipline et le niveau pour les livres scolaires. 
+- Une librairie vend des livres caractérisés par:
+  * un nom
+  * un ou des auteurs
+  * un nombre de pages
+- Certains livres possèdent également d’autres caractéristiques comme :
+  * une fourchette des âges pour les livres pour enfants
+  * une discipline et le niveau pour les livres scolaires
 
- --- 
+ ---
 Exercices: Diagrammes de classes
 
- On considère une entreprise, et on suppose qu’un chef dirige plusieurs salariés (les
-subordonnés) et que le chef est lui-même un salarié
+![img](./build/librairie.png)
 
- --- 
+ ---
 Exercices: Diagrammes de classes
 
-On considère une université, et les personnes y travaillant qui peuvent être des étudiants ou
-des enseignants. 
+Une entreprise est constitué de salariés où des subordonnées sont sous la direction d'un chef, lui même salarié et sous la direction d'un chef.
 
- --- 
+ ---
 Exercices: Diagrammes de classes
 
-Une classe Véhicule a été caractérisée par les propriétés suivantes : Numéro du véhicule, date de
-fabrication du véhicule, pavillon du bateau, nombre de réacteurs, superficie des ailes, puissance
-fiscale, hauteur du mat, nombre de torpilles.
-Quel est le défaut de cette classe ? Proposez une autre représentation à l’aide d’un diagramme de
-classes.
+![img](./build/entreprise.png)
 
- --- 
+ ---
 Exercices: Diagrammes de classes
 
-Dans une société de transport, on voudrait gérer les bus de ramassage scolaire et les conducteurs.
-Un lycéen est un enfant, il est caractérisé par son nom, son âge et son sexe. Les informations qui
-caractérisent le conducteur sont les mêmes que pour le lycéen, avec en plus le numéro de son
-permis. Quant au bus, on a besoin de connaître son numéro d’immatriculation, sa date de mise en
-service, nombre d’années de service, et le poids total.
-Un bus est composé d’une carrosserie (poids, couleur), de 6 roues (pression, diamètre), de plusieurs
-sièges (couleur) pour passagers, plusieurs vitres (épaisseur, poids).
+Une classe Véhicule a été caractérisée par les propriétés suivantes :
+* Numéro du véhicule
+* Date de fabrication
+* Pavillon du bateau
+* Nombre de réacteurs
+* Superficie des ailes
+* Hauteur du mat
+* Nombre de torpilles.
+Quel est le défaut de cette classe ? Proposez une autre représentation.
 
- --- 
+ ---
 Exercices: Diagrammes de classes
 
-Un utilisateur souhaite se faire un café expresso à son gout. Il souhaiterias pouvoir configuer l'intensité de on café ainsi que choisir entre en un café court et un café long. La maintenance de la machinequ, quantité 'eau et de café grain suffisant, état du réservoir de marc à café) est à la charge de l'utilisateur.
+![img](./build/vehicule.png)
 
-  --- 
+ ---
+Exercices: Diagrammes de classes
+
+* Dans une société de transport, on voudrait gérer les bus de ramassage scolaire et les conducteurs.
+* Un lycéen est un enfant, il est caractérisé par son nom et son âge
+* Les informations qui caractérisent le conducteur sont les mêmes que pour le lycéen, avec en plus le numéro de son permis.
+* Quant au bus, on a besoin de connaître son numéro d’immatriculation, sa date de mise en service, nombre d’années de service, et le poids total. De plus, un bus est composé d’une carrosserie (poids, couleur), de 6 roues (pression, diamètre), de plusieurs sièges (couleur) pour passagers).
+
+ ---
+Exercices: Diagrammes de classes
+
+![img](./build/transport.png)
+
+ ---
+Exercices: Diagrammes de classes
+
+ Un utilisateur souhaite se faire un café expresso. Il souhaiterait pouvoir configuer l'intensité de son café ainsi que choisir entre en un café court et un café long. La maintenance de la machine, la quantité d'eau et de grain de café, état du réservoir de marc à café est à la charge de l'utilisateur.
+
+  ---
 Exercices: Diagrammes de classes
 
 L'utilisateur souhaiterais ne pas à avoir à configurer la machine à chaque fois qu'il l'utilise et souhaiterias donc enregister ses preferences ainsi que celle de toutes les personnes qui souhaite enregister un profil d'utilisateur.

@@ -1,0 +1,24 @@
+@startuml polymorphisme
+scale 400*400
+
+class Conducteur {
+    + avance(Vehicule vehicule)
+}
+
+class Vehicule {
+    + void roule()
+    + void changeDirection(Direction direction)
+    - void seConnectALArbreDeTransmission()
+    - void allumeMoteur()
+}
+
+class Camion {
+    - Remorque remorque
+    + void roule()
+    + void ChargeRemorque()
+}
+
+Camion --|> Vehicule
+Conducteur -- Vehicule
+
+@enduml

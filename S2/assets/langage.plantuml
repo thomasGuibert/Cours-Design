@@ -1,0 +1,10 @@
+@startuml langage
+scale 400*400
+
+
+class Personnes {
+  void CodeEn(LangageDeProgrammation langageDeProgrammation){}
+}
+
+Personnes --> LangageDeProgrammation
+@enduml

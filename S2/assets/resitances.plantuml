@@ -1,0 +1,11 @@
+@startuml resistance
+scale 400*400
+
+class Périphérique {
+  Résistance[] resistances;
+}
+Périphérique *-- Résistance
+Souris <|-- Périphérique
+Clavier <|-- Périphérique
+
+@enduml

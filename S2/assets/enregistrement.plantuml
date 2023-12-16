@@ -1,0 +1,10 @@
+@startuml enregistrement
+scale 400*400
+
+class Fichier {
+  Enregistrement[] enregistrements
+}
+
+Fichier "1" o-- "*" Enregistrement
+
+@enduml

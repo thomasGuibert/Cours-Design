@@ -1,0 +1,18 @@
+@startuml heritage
+scale 400*400
+
+class Vehicule {
+    + void roule()
+    + void changeDirection(Direction direction)
+    - void seConnectALArbreDeTransmission()
+    - void allumeMoteur()
+}
+
+class Camion {
+    - Remorque remorque
+    + void ChargeRemorque()
+}
+
+Camion --|> Vehicule
+
+@enduml

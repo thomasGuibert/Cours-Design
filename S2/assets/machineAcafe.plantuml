@@ -1,45 +1,41 @@
 @startuml machine à café
 scale 400*400
 
-(*) --> "Choisir intensité café" 
+(*) --> "Choisir intensité café"
 if "Bonne intensité" then
-    --> [false]"Augmenter ou diminuer l'intensité" 
-    --> "Choisir intensité café" 
+    --> [false]"Augmenter ou diminuer l'intensité"
+    --> "Choisir intensité café"
 else
     -->  [true]"Choisir type de café"
 endif
 
 if "Type café" then
---> [long] "Café long sélectionné"
---> "Machine configuré"
+    --> [long] "Café long sélectionné"
+    --> "Machine configuré"
 else
---> [court] "Café court sélectionné"
---> "Machine configuré"
+    --> [court] "Café court sélectionné"
+    --> "Machine configuré"
 endif
-
-if "Machine prete"
+if "Assez de grain" then
+    --> [oui] "Machine chargé en grain"
+else
+    --> [non] "Remplir machine"
+    --> "Machine chargé en grain"
+endif
+if "Assez d'eau" then
+    --> [oui] "Machine chargé en eau"
+else
+    --> [non] "Remplir d'eau"
+    --> "Machine chargé en eau"
+endif
+if "Bac de marc à afé plein" then
+    --> [true] "Vider le bac"
+    --> "Bac de la machine vidé"
+else
+    --> [false] "Bac de la machine vidé"
+endif
 --> "Servir café"
-else
-    if "Pas assez de grain" then
-        --> [true] "Remplir machine"
-        --> "Machine chargé en grain"
-    else
-        --> [false] "Machine chargé en grain"
-    endif
-    if "Pas assez d'eau" then
-        --> [true] "Remplir d'eau"
-        --> "Machine chargé en eau"
-    else
-        --> [false] "Machine chargé en eau"
-    endif
-    if "Bac de marc à afé plein" then
-        --> [true] "Vider le bac"
-        --> "Bac de la machine vidé"
-    else
-        --> [false] "Bac de la machine vidé"
-    endif
-    --> "Servir café"
-endif
+
 --> (*)
 @enduml
 
