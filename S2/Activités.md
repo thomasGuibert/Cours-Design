@@ -1,5 +1,6 @@
 # Plan de la scéance
-* [Recap](Kahoot.fr) 15min
+* rapport à l'echec
+* [Recap](./quizz.pdf) 15min
 * [Diagramme d'activités]()
     * modélisation machine à café ensemble
     * modélisation d'un algo 
@@ -13,6 +14,4 @@
     * modélisation machine à café ensemble
     * "sauvegarde profiles" en solo/groupe
 
-
-
-
+https://mermaid.live/

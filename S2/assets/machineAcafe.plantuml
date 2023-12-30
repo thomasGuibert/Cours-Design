@@ -1,5 +1,4 @@
 @startuml machine à café
-scale 400*400
 
 (*) --> "Choisir intensité café"
 if "Bonne intensité" then
