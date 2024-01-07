@@ -1,0 +1,14 @@
+@startuml Retour
+scale 600*600
+hide footbox
+
+Emmeteur -> Serveur: envoi(message, destinataireId)
+Serveur -> Serveur: trouveDestinataire(destinataireId)
+alt destinataire trouvé
+Serveur -> Destinataire: envoi(message)
+Destinataire -> Serveur: message reçu
+Serveur -> Emmeteur: message reçu
+else destinataire n'existe pas
+Serveur -> Emmeteur: pas de destinataire
+end
+@enduml
