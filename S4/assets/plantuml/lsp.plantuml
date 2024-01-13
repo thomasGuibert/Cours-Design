@@ -1,0 +1,23 @@
+@startuml lsp
+scale 600*600
+hide footbox
+
+class Duck{
+    fly()
+}
+
+class ElectricDuck{
+    fly()
+    turnOn()
+    turnOff()
+}
+
+class Pond{
+    runDuckFly()
+}
+
+
+Pond --o Duck
+ElectricDuck -|> Duck
+
+@enduml

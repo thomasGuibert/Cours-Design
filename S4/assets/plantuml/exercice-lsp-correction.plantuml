@@ -1,0 +1,20 @@
+@startuml exercice-lsp-correction
+scale 600*600
+hide footbox
+
+abstract class User{
+
+}
+
+class RegisteredUser  {
+    string: emailAddress
+    getEmailAddress()
+}
+
+class AnonymousUser  {
+}
+
+User <|-- RegisteredUser
+User <|-- AnonymousUser
+
+@enduml

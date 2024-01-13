@@ -1,0 +1,18 @@
+@startuml isp
+scale 600*600
+hide footbox
+
+
+Transaction <|-- Withdraw
+Transaction <|-- Deposit
+Transaction <|-- Transfert
+
+Withdraw ..|> IWithdraw
+Deposit ..|> IDeposit
+Transfert ..|> ITransfert
+
+IWithdraw <-- ATM
+IDeposit <-- ATM
+ITransfert <-- ATM
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml dip1
+scale 600*600
+hide footbox
+
+class Switch{
+    press()
+}
+
+class Lamp{
+    toggle()
+}
+
+class TV{
+    toggle()
+}
+
+Switch -- Lamp
+Switch -- TV
+
+@enduml

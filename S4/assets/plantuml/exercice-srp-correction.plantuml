@@ -1,0 +1,49 @@
+@startuml exercice-srp-correction
+scale 600*600
+hide footbox
+
+class AccountIdentifier{
+    logIn()
+    logOUt()
+}
+
+class User{
+    UserAccount: userAccount
+    Basket: basket
+    Product[]: sellingProducts
+}
+
+class UserAccount{
+    string: firstName
+    string: lastName
+    string: address
+    BankAccount: bankAccount
+}
+
+class BankAccount{
+    string: IBAN
+    string: debitCardNumber
+    debit()
+    credit()
+}
+
+class Basket{
+    AddProductToBasket()
+    Command()
+}
+
+class Store{
+    AddProductToStore()
+}
+
+class Product {
+
+}
+
+AccountIdentifier --> User
+User *-- UserAccount
+User *-- Basket
+User *-- Product
+User -> Store
+BankAccount -* UserAccount
+@enduml

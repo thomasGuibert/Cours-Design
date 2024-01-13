@@ -1,0 +1,19 @@
+@startuml exercice-ocp
+scale 600*600
+hide footbox
+
+class Vendor{
+    sell()
+}
+
+class Customer {
+    int: age
+}
+
+class CustomerAgeValidator{
+    isOldEnoughToBuyAlcohol(int age)
+}
+
+Customer --> Vendor
+Vendor o- CustomerAgeValidator
+@enduml

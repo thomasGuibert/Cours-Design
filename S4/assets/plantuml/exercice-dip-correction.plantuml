@@ -1,0 +1,22 @@
+@startuml exercice-dip-correction
+scale 600*600
+hide footbox
+
+interface Logger{
+    log()
+}
+
+class ConsoleLogger {
+    log()
+}
+
+class SomeService {
+    - Logger: logger
+    SomeService(Logger)
+    someMethodWithLog()
+}
+
+Logger <|-- ConsoleLogger
+Logger -o SomeService
+
+@enduml

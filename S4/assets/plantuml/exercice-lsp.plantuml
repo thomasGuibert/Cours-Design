@@ -1,0 +1,16 @@
+@startuml exercice-lsp
+scale 400*400
+hide footbox
+
+class User{
+    string: emailAddress
+    getEmailAddress()
+}
+
+class AnonymousUser  {
+    getEmailAddress() --throw exception
+}
+
+User <|-- AnonymousUser
+
+@enduml

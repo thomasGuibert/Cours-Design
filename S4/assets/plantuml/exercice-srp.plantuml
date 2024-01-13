@@ -1,0 +1,28 @@
+@startuml exercice-srp
+scale 400*400
+hide footbox
+
+class User{
+    string: firstName
+    string: lastName
+    string: address
+    string: IBAN
+    string: debitCardNumber
+    UserAccount: userAccount
+    Product[]: sellingProducts
+    AddProductToBasket()
+    Command()
+    AddProductToStore()
+    logIn()
+    logOUt()
+    debit()
+    credit()
+}
+
+class Product {
+
+}
+
+User *- Product
+
+@enduml

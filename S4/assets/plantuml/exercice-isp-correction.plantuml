@@ -1,0 +1,22 @@
+@startuml exercice-isp-correction
+scale 600*600
+hide footbox
+
+class Vehicle {
+    startEngine()
+    turnLightsOn()
+}
+
+class VehicleLightTurner  {
+    LightSwitcher: lightSwitcher
+    turnOnTheLights()
+}
+
+interface LightSwitcher{
+    turnLightsOn()
+}
+
+LightSwitcher --o VehicleLightTurner
+Vehicle <|- LightSwitcher
+
+@enduml
