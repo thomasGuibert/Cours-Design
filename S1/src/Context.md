@@ -54,11 +54,12 @@ class:
 **hardware vs software**
 
 ---
-# Modélisation du système
+# Different niveaux de conceptions
 
 * Organisation de l'entreprise
-* Architecture des solutions
-* Schéma de conception
+* Architectures logiciel (Strategie)
+* Schéma de conception (Tactique)
+* Algorithmique
 
  ---
  # Organisation de l'entreprise
@@ -67,17 +68,21 @@ class:
  _les organisations créent des systèmes à l’image de leurs propres structures de communication_
 
  ---
-
  # Architectures logiciel
 
-* NTiers
-* MVC
-* Hexagonal
+* Communication entre les systemes
+    * API
+    * Queue
+    * ...
+* Architecture des systemes
+    * NTiers
+    * Hexagonal
+    * ...
 
---- 
-# Modélisation de systèmes
-   
- * Principes SOLID
- * Design pattern
+---
+# Schéma de conception
 
- 
+ * Principes de conception orientée objet
+    * SOLID
+    * Design pattern
+
