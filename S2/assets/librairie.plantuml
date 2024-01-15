@@ -18,7 +18,7 @@ class LivreEnfant {
   int ageMax
 }
 
-Librairie "1" --o "*" Livre
+Librairie "1" o-- "*" Livre
 LivreScolaire --|> Livre
 LivreEnfant --|> Livre
 @enduml
