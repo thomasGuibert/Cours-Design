@@ -61,4 +61,4 @@ A partir du diagramme d'activité et du diagramme de classe de la machine à caf
 Exercices: Diagrammes de séquences
 
 * Comment gérer tous les cas ?
-* Le diagramme est il le même si les appels son asynchones ?
+* Le diagramme est il le même si les appels sont asynchones ?
