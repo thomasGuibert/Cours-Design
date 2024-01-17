@@ -1,7 +1,0 @@
-@startuml Envoi
-scale 600*600
-hide footbox
-
-Emmeteur -> Destinataire: envoi(message)
-
-@enduml

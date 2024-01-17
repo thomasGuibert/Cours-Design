@@ -1,9 +1,0 @@
-@startuml Serveur
-scale 600*600
-hide footbox
-
-Emmeteur -> Serveur: envoi(message, destinataireId)
-Serveur -> Serveur: trouveDestinataire(destinataireId)
-Serveur -> Destinataire: envoi(message)
-
-@enduml
