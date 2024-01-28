@@ -1,0 +1,38 @@
+@startuml utilisation-share-music-project
+left to right direction
+
+actor Visiteur as v
+package "Mélomane" {
+    actor Utilisateur as u
+    actor Abonné as a
+}
+
+package "Share music project" {
+    usecase "Créer un compte" as cuc
+    usecase "Se connecter" as sc
+    usecase "Se deconnecter" as sd
+    usecase "Ajouter une musique" as aum
+    usecase "Payer un abonnement" as pua
+    usecase "Valider une musique" as vum
+    usecase "Créer une salle de musique" as cusdm
+    usecase "Ecrire un message" as eum
+    usecase "Ecouter de la musique" as edlm
+}
+
+u -|> v
+a -|> u
+
+v --> cuc
+v --> sc
+u --> sd
+u ..> aum : Si validé\n par le responsable\n de la salle
+u --> eum
+u --> edlm
+a --> edlm
+a --> eum
+a --> aum
+a --> pua
+a --> vum
+a --> cusdm
+
+@enduml

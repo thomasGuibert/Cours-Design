@@ -1,0 +1,36 @@
+@startuml activité-salle-de-musique
+
+(*) --> "Salle de musique créée"
+if "Créé par ajout de musique" then
+--> [oui] "Diffuse musique"
+else
+--> [non] "En attente de commande"
+endif
+
+if "Pas d'activté" then
+    --> [oui] "Salle de musique détruite"
+else
+    --> [non] "Recoi une commande"
+endif
+
+if "Commande d'ecriture ou d'ajout d'une musique" then
+    --> [ajout de musique] "Musique reçu"
+    if "Ajouté par le créateur de la salle" then
+        --> [oui] "Diffuse musique"
+    else
+        --> [non] "Musique d'un utilsateur à traiter"
+        if "Musique validé par le créateur" then
+            --> [oui] "Diffuse musique"
+            --> "En attente de commande"
+        else
+            --> [non] "Musique réjeté"
+            --> "En attente de commande"
+        endif
+    endif
+else
+    --> [écriture] "Message écrit dans le chat"
+    --> "En attente de commande"
+endif
+
+"Salle de musique détruite" --> (*)
+@enduml
