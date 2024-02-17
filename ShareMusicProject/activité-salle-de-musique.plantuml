@@ -14,16 +14,16 @@ else
 endif
 
 if "Commande d'ecriture ou d'ajout d'une musique" then
-    --> [ajout de musique] "Musique reçu"
+    --> [ajout de musique] "Musique reçue"
     if "Ajouté par le créateur de la salle" then
         --> [oui] "Diffuse musique"
     else
         --> [non] "Musique d'un utilsateur à traiter"
-        if "Musique validé par le créateur" then
+        if "Musique validée par le créateur" then
             --> [oui] "Diffuse musique"
             --> "En attente de commande"
         else
-            --> [non] "Musique réjeté"
+            --> [non] "Musique réjetée"
             --> "En attente de commande"
         endif
     endif

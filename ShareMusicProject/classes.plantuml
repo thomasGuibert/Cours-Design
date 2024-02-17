@@ -1,0 +1,122 @@
+@startuml classes
+
+interface IServiceCreationDeComptesUtilisateurs{
+    CompteUtilisateur CreeCompte()
+}
+
+interface IServiceDeConnectionComptesUtilisateurs{
+    CompteUtilisateur ConnecteUtilisateur()
+    Deconnect(Utilisateur utilisateur)
+}
+class ServiceDeComptesUtilisateurs{
+    CompteUtilisateur[] comptesUtilisateur
+    CompteUtilisateur CreeCompte()
+    CompteUtilisateur ConnecteUtilisateur()
+}
+
+interface IGestionnaireDAbonnement{
+    Abonne RecupereAbonnement()
+    void PayeAbonnement()
+}
+
+class CompteUtilisateur{
+    Utilisateur utilisateur
+    Abonne RecupereAbonnement()
+    void PayeAbonnement()
+}
+
+interface ICreateurDeSalleDeMusique {
+    SalleMusique CreeSalleMusique(Abonne abonne, string nom)
+    SalleMusique CreeSalleMusique(Musique musique)
+}
+
+interface IGestionnaireDeMusique {
+    AjoutMusique(Musique musique)
+}
+interface IGestionnaireDUtilisateur {
+    AjoutUtilisateur(Utilisateur utilisateur)
+}
+interface IGestionnaireDeMessage {
+    AjoutMessage(Message message)
+}
+
+class ServiceDeSallesDeMusiques{
+    SalleMusique[] ListeDesSalles
+    SalleMusique CreeSalleMusique(Abonne abonne, string nom)
+    SalleMusique CreeSalleMusique(Musique musique)
+}
+
+class Message {
+    uuid: id
+    Utilisateur: utilisateur
+    string: message
+}
+
+class Musique{
+    uuid: id
+    string: nom
+    Utilisateur: utilisateur
+    byte[]: morceau
+}
+
+class SalleMusique{
+    uuid: id
+    string: nom
+    Message[]: messages
+    Musique[]: musiques
+    Utilisateur[]: participants
+    Abonne: createur
+    AjoutMusique(Musique musique)
+    AjoutUtilisateur(Utilisateur utilisateur)
+    AjoutMessage(Message message)
+    Ferme()
+}
+
+interface IValidateurDeMusique {
+    boolean ValideMusique(Musique musique, Abonne abonne)
+}
+
+class ValidateurDeMusique {
+    boolean ValideMusique(Musique musique, Abonne abonne)
+}
+
+interface IMusiquePlayer{
+    Joue(Musique musique)
+}
+class MusiquePlayer{
+    Joue(Musique musique)
+}
+
+class Utilisateur{
+    uuid: id
+    string: nom
+}
+
+class Abonne{
+    dateInscription: date
+}
+
+IServiceCreationDeComptesUtilisateurs <|.. ServiceDeComptesUtilisateurs
+IServiceDeConnectionComptesUtilisateurs <|.. ServiceDeComptesUtilisateurs
+
+ServiceDeComptesUtilisateurs *- CompteUtilisateur
+CompteUtilisateur o- Utilisateur
+Utilisateur <|- Abonne
+ICreateurDeSalleDeMusique <|.. ServiceDeSallesDeMusiques
+ServiceDeSallesDeMusiques *-- SalleMusique
+IGestionnaireDeMusique <|.. SalleMusique
+IGestionnaireDUtilisateur <|.. SalleMusique
+IGestionnaireDeMessage <|.. SalleMusique
+Message o-- Utilisateur
+Musique o-- Utilisateur
+SalleMusique o-- Message
+SalleMusique o-- Musique
+SalleMusique o-- Abonne
+SalleMusique o-- Utilisateur
+SalleMusique *-- IValidateurDeMusique
+IValidateurDeMusique <|.. ValidateurDeMusique
+IMusiquePlayer <|.. MusiquePlayer
+SalleMusique -- IMusiquePlayer
+IGestionnaireDAbonnement <|.. CompteUtilisateur
+
+@enduml
