@@ -4,32 +4,32 @@
 if "Créé par ajout de musique" then
 --> [oui] "Diffuse musique"
 else
---> [non] "En attente de commande"
+--> [non] "En attente d'une commande"
 endif
 
 if "Pas d'activté" then
     --> [oui] "Salle de musique détruite"
 else
-    --> [non] "Recoi une commande"
+    --> [non] "Reçoit une commande"
 endif
 
-if "Commande d'ecriture ou d'ajout d'une musique" then
-    --> [ajout de musique] "Musique reçue"
+if "Commande d'écriture ou d'ajout d'une musique" then
+    --> [ajout d'une musique] "Musique reçue"
     if "Ajouté par le créateur de la salle" then
         --> [oui] "Diffuse musique"
     else
         --> [non] "Musique d'un utilsateur à traiter"
         if "Musique validée par le créateur" then
             --> [oui] "Diffuse musique"
-            --> "En attente de commande"
+            --> "En attente d'une commande"
         else
             --> [non] "Musique réjetée"
-            --> "En attente de commande"
+            --> "En attente d'une commande"
         endif
     endif
 else
     --> [écriture] "Message écrit dans le chat"
-    --> "En attente de commande"
+    --> "En attente d'une commande"
 endif
 
 "Salle de musique détruite" --> (*)

@@ -1,11 +1,12 @@
 @startuml sequence
 
 -> SalleMusique : AjoutMusique(Musique musique)
-SalleMusique -> Abonne : ValideMusique(Musique musique)
+SalleMusique -> ValidateurDeMusique : ValideMusique(Musique musique)
+SalleMusique <- ValidateurDeMusique : validation
 alt morceau validé
     SalleMusique -> MusiquePlayer : Joue(Musique musique)
 else
-<- SalleMusique: morceau rejete
+<- SalleMusique: morceau rejeté
 end
 
 @enduml

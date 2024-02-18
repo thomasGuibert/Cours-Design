@@ -1,29 +1,5 @@
 @startuml classes
 
-interface IServiceCreationDeComptesUtilisateurs{
-    CompteUtilisateur CreeCompte()
-}
-
-interface IServiceDeConnectionComptesUtilisateurs{
-    CompteUtilisateur ConnecteUtilisateur()
-    Deconnect(Utilisateur utilisateur)
-}
-class ServiceDeComptesUtilisateurs{
-    CompteUtilisateur[] comptesUtilisateur
-    CompteUtilisateur CreeCompte()
-    CompteUtilisateur ConnecteUtilisateur()
-}
-
-interface IGestionnaireDAbonnement{
-    Abonne RecupereAbonnement()
-    void PayeAbonnement()
-}
-
-class CompteUtilisateur{
-    Utilisateur utilisateur
-    Abonne RecupereAbonnement()
-    void PayeAbonnement()
-}
 
 interface ICreateurDeSalleDeMusique {
     SalleMusique CreeSalleMusique(Abonne abonne, string nom)
@@ -96,11 +72,7 @@ class Abonne{
     dateInscription: date
 }
 
-IServiceCreationDeComptesUtilisateurs <|.. ServiceDeComptesUtilisateurs
-IServiceDeConnectionComptesUtilisateurs <|.. ServiceDeComptesUtilisateurs
 
-ServiceDeComptesUtilisateurs *- CompteUtilisateur
-CompteUtilisateur o- Utilisateur
 Utilisateur <|- Abonne
 ICreateurDeSalleDeMusique <|.. ServiceDeSallesDeMusiques
 ServiceDeSallesDeMusiques *-- SalleMusique
@@ -117,6 +89,5 @@ SalleMusique *-- IValidateurDeMusique
 IValidateurDeMusique <|.. ValidateurDeMusique
 IMusiquePlayer <|.. MusiquePlayer
 SalleMusique -- IMusiquePlayer
-IGestionnaireDAbonnement <|.. CompteUtilisateur
 
 @enduml

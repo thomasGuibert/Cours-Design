@@ -1,0 +1,48 @@
+@startuml classesUtilisateurs
+
+interface IServiceCreationDeComptesUtilisateurs{
+    CompteUtilisateur CreeCompte()
+}
+
+interface IServiceDeConnectionComptesUtilisateurs{
+    CompteUtilisateur ConnecteUtilisateur()
+    Deconnect(Utilisateur utilisateur)
+}
+class ServiceDeComptesUtilisateurs{
+    CompteUtilisateur[] comptesUtilisateur
+    CompteUtilisateur CreeCompte()
+    CompteUtilisateur ConnecteUtilisateur()
+    void Deconnect(Utilisateur utilisateur)
+}
+
+interface IGestionnaireDAbonnement{
+    Abonne RecupereAbonnement()
+    void PayeAbonnement()
+}
+
+class CompteUtilisateur{
+    Utilisateur utilisateur
+    Abonne RecupereAbonnement()
+    void PayeAbonnement()
+}
+
+
+class Utilisateur{
+    uuid: id
+    string: nom
+}
+
+class Abonne{
+    dateInscription: date
+}
+
+IServiceCreationDeComptesUtilisateurs <|.. ServiceDeComptesUtilisateurs
+IServiceDeConnectionComptesUtilisateurs <|.. ServiceDeComptesUtilisateurs
+
+ServiceDeComptesUtilisateurs *- CompteUtilisateur
+CompteUtilisateur o- Utilisateur
+Utilisateur <|- Abonne
+IGestionnaireDAbonnement <|.. CompteUtilisateur
+
+
+@enduml

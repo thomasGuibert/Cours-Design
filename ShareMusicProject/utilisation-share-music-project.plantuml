@@ -12,6 +12,7 @@ package "Share music project" {
     usecase "Se connecter" as sc
     usecase "Se deconnecter" as sd
     usecase "Ajouter une musique" as aum
+    usecase "Rejoindre une salle de musique" as rusdm
     usecase "Payer un abonnement" as pua
     usecase "Valider une musique" as vum
     usecase "Créer une salle de musique" as cusdm
@@ -19,19 +20,17 @@ package "Share music project" {
     usecase "Ecouter de la musique" as edlm
 }
 
-u -|> v
+v <|- u
 a -|> u
 
-v --> cuc
-v --> sc
-u --> sd
-u ..> aum : Si validé\n par le responsable\n de la salle
-u --> eum
-u --> edlm
-a --> edlm
-a --> eum
-a --> aum
-a --> pua
+v -> cuc
+v -> sc
+u -> sd
+u -> rusdm
+rusdm ..> aum : Si créateur de la salle ou validé\n par le créateur\n de la salle
+rusdm --> eum
+rusdm --> edlm
+u --> pua
 a --> vum
 a --> cusdm
 
