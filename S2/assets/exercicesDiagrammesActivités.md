@@ -24,4 +24,3 @@ Exercices: Diagrammes d'activités
 
 Un client souhaite acheter un vêtement dans un magasin. Il peut regarder et essayer les articles proposés. Il peut être conseillé par un vendeur et voir en caisse pour avoir une réduction. Enfin, apres avoir sélectionné un ou des articles, il peut les acheter.
 
- 

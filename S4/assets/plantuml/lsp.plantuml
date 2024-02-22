@@ -17,7 +17,7 @@ class Pond{
 }
 
 
-Pond --o Duck
+Pond o-- Duck
 ElectricDuck -|> Duck
 
 @enduml
