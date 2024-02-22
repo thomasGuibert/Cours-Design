@@ -47,7 +47,7 @@ Pour chaque exemple ci-dessous, indiquez si la relation présentée est une gén
 
   ---
 Diagrammes de classes: Les fichiers contiennent des enregistrements
-=> __Agregation__
+=> __Agrégation__
 ![img](./build/enregistrement.png)
 
 ```
@@ -160,9 +160,9 @@ Exercices: Diagrammes de classes
  ---
 Exercices: Diagrammes de classes
 
- Un utilisateur souhaite se faire un café expresso. Il souhaiterait pouvoir configuer l'intensité de son café ainsi que choisir entre en un café court et un café long. La maintenance de la machine, la quantité d'eau et de grain de café, état du réservoir de marc à café est à la charge de l'utilisateur.
+ Un utilisateur souhaite se faire un café expresso. Il souhaiterait pouvoir configurer l'intensité de son café ainsi que choisir entre en un café court et un café long. La maintenance de la machine, la quantité d'eau et de grain de café, état du réservoir de marc à café est à la charge de l'utilisateur.
 
   ---
 Exercices: Diagrammes de classes
 
-L'utilisateur souhaiterait ne pas à avoir à configurer la machine à chaque fois qu'il l'utilise et souhaiterait donc enregister ses preferences. La machine peut être utilisé par plusieurs personnes.
+L'utilisateur souhaiterait ne pas à avoir à configurer la machine à chaque fois qu'il l'utilise et souhaiterait donc enregistrer ses preferences. La machine peut être utilisé par plusieurs personnes.

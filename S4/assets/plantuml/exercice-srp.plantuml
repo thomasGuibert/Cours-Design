@@ -8,7 +8,6 @@ class User{
     string: address
     string: IBAN
     string: debitCardNumber
-    UserAccount: userAccount
     Product[]: sellingProducts
     AddProductToBasket()
     Command()
@@ -17,10 +16,6 @@ class User{
     logOUt()
     debit()
     credit()
-}
-
-class Product {
-
 }
 
 User *- Product

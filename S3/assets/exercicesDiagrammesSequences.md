@@ -43,12 +43,12 @@ L'**Emetteur** est informé quand le _message_ est reçu ainsi que lorsque le **
  ---
 Exercices: Diagrammes de séquences
 
-Il peut arriver que le **Destinataire** ne recoive pas le _message_ même si ce dernier a été envoyé par le seveur. Dans ce cas, le serveur renvoie le message jusqu'à ce qu'il soit delivré ou dans la limite de 10 tentatives.
+Il peut arriver que le **Destinataire** ne reçoit pas le _message_ même si ce dernier a été envoyé par le serveur. Dans ce cas, le serveur renvoie le message jusqu'à ce qu'il soit délivré ou dans la limite de 10 tentatives.
 
  ---
 Exercices: Diagrammes de séquences
 
-Il peut arriver que le **Destinataire** ne recoive pas le _message_ même si ce dernier a été envoyé par le seveur. Dans ce cas, le serveur renvoie le message jusqu'à ce qu'il soit delivré ou dans la limite de 10 tentatives.
+Il peut arriver que le **Destinataire** ne reçoit pas le _message_ même si ce dernier a été envoyé par le serveur. Dans ce cas, le serveur renvoie le message jusqu'à ce qu'il soit délivré ou dans la limite de 10 tentatives.
 
 ![img](./build/Retry.png)
 
@@ -61,4 +61,4 @@ A partir du diagramme d'activité et du diagramme de classe de la machine à caf
 Exercices: Diagrammes de séquences
 
 * Comment gérer tous les cas ?
-* Le diagramme est il le même si les appels sont asynchones ?
+* Le diagramme est il le même si les appels sont asynchrones ?

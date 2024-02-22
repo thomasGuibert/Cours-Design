@@ -26,7 +26,7 @@ class:
 * Apprendre
 
  ---
-# Differents diagrammes
+# Différents diagrammes
 |Diagrammes structurels|Diagrammes comportementaux|Diagrammes d'interaction|
 | :--------------- |:---------------:| -----:|
 |**Diagramme de classes**|**Diagramme de cas d'utilisation**|**Diagramme de séquence**|
@@ -75,7 +75,7 @@ public class MyClass1(){
  ```
 
  ---
- # Classes: Agregation
+ # Classes: Agrégation
  ![img](./assets/uml/agregation.png)
  ```
 public class MyClass1(){

@@ -61,7 +61,7 @@ class:
 
   * Un langage
   * Un logiciel
-  * Une methode
+  * Une méthode
   * Un dessin
 
  ---
@@ -69,7 +69,7 @@ class:
 
   * __Un langage__
   * Un logiciel
-  * Une methode
+  * Une méthode
   * Un dessin
 
    ---

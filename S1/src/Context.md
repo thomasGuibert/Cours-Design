@@ -31,7 +31,7 @@ class:
 ![image](./assets/NOTime.jfif)
 
  ---
- # Cout de la qualité
+ # Coût de la qualité
  ![image](./assets/CostOfDefect.webp)
 
  ---
@@ -57,7 +57,7 @@ class:
 # Different niveaux de conceptions
 
 * Organisation de l'entreprise
-* Architectures logiciel (Strategie)
+* Architectures logiciel (Stratégie)
 * Schéma de conception (Tactique)
 * Algorithmique
 
@@ -70,11 +70,11 @@ class:
  ---
  # Architectures logiciel
 
-* Communication entre les systemes
+* Communication entre les systèmes
     * API
     * Queue
     * ...
-* Architecture des systemes
+* Architecture des systèmes
     * NTiers
     * Hexagonal
     * ...

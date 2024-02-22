@@ -1,5 +1,5 @@
 @startuml lsp
-scale 600*600
+scale 400*400
 hide footbox
 
 class Duck{

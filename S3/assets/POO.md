@@ -5,29 +5,30 @@ class:
     - lead
     - invert
  ---
- Programmation Orienté Objet
+# Programmation Orienté Objet
 
  ---
 
-Classe, un patron pour creer des objets
+# Classe, un patron pour créer des objets
 
  ---
- Classe
+# Classe
 
- * Constructeur -> Comment mon patron va creer une instance de classe (un objet)
+ * Constructeur -> Comment mon patron va créer une instance de classe (un objet)
  * Propriétés -> Les composants de l'objet
  * Méthode -> Les comportements de l'objet
 
  ---
- Classe et objets
+# Classe et objets
 
-Une classe __definie__ un contexte, un comportement interne.
-Un objet __implemente__ un contexte, un comportement interne.
+Une classe __définie__ un contexte, un comportement interne.
+Un objet __implémente__ un contexte, un comportement interne.
 
  ---
-Encapsulation
 
-Classes et objets peuvent exposer une partie de leurs contextes ou de leurs comportements pour communiquer avec l'exterieur
+# Encapsulation
+
+Classes et objets peuvent exposer une partie de leurs contextes ou de leurs comportements pour communiquer avec l'extérieur
 ![img](./build/encapsulation.png)
 ```
 class conducteur{
@@ -36,7 +37,7 @@ class conducteur{
 ```
 
  ---
-Surchage
+# Surcharge
 
 Un objet peut surcharger un comportement
 
@@ -48,7 +49,7 @@ class conducteur{
 ```
 
  ---
- Héritage
+# Héritage
 
 Un objet peut être spécialisé, étendu grâce à de l'heritage
 
@@ -59,23 +60,23 @@ class Camion extends Vehicule { }
 ```
 
  ---
-Redéfinition
+# Redéfinition
 
-Un objet spécialisé peut rédefinir un comportement ou un contexte
+Un objet spécialisé peut redéfinir un comportement ou un contexte
 
 ![img](./build/redefinition.png)
 
 ```
 class conducteur {
-     // même nom de methode que vehicule.roule mais cette fois-ci la vitesse est limitée à 110km/h dans le code de la methode camion.roule
+     // même nom de méthode que vehicule.roule mais cette fois-ci la vitesse est limitée à 110km/h dans le code de la méthode camion.roule
     void avance(Camion camion){ camion.roule(); }
 }
 ```
 
  ---
-Polymorphisme
+# Polymorphisme
 
-Un objet peut être vue comme une classe de sa hierarchie
+Un objet peut être vue comme une classe de sa hiérarchie
 
 ![img](./build/polymorphisme.png)
 
@@ -87,7 +88,7 @@ class conducteur {
 }
 ```
  ---
- Classe abstraite
+# Classe abstraite
 
 Patron d'objet qui ne peut pas être instancié
 
@@ -100,13 +101,13 @@ new Vehicule() //KO
 ```
 
  ---
- Interface
+# Interface
 
  Definition d'un contrat
 ![img](./build/interface2.png)
 
  ---
- Interface
+# Interface
 
  Definition d'un contrat
 ![img](./build/interface.png)
@@ -114,4 +115,4 @@ new Vehicule() //KO
  ---
  Sources
 
- https://www.technologuepro.com/cours-informatique/cours-15-programmation-orientee-objets-poo/
+ [Cours POO](https://www.technologuepro.com/cours-informatique/cours-15-programmation-orientee-objets-poo/)

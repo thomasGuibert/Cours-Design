@@ -2,17 +2,25 @@
 scale 600*600
 hide footbox
 
+Interface IWorker{
+    work()
+    eat()
+    sleep()
+}
 
-Transaction <|-- Withdraw
-Transaction <|-- Deposit
-Transaction <|-- Transfert
+class HumanWorker {
+    work()
+    eat()
+    sleep()
+}
 
-Withdraw ..|> IWithdraw
-Deposit ..|> IDeposit
-Transfert ..|> ITransfert
+class RobotWorker {
+    work()
+    eat()
+    sleep()
+}
+note left: eat and sleep are not relevant
 
-IWithdraw <-- ATM
-IDeposit <-- ATM
-ITransfert <-- ATM
-
+IWorker <|-- HumanWorker
+IWorker <|-- RobotWorker
 @enduml
