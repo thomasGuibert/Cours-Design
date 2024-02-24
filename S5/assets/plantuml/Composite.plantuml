@@ -1,0 +1,13 @@
+@startuml Composite
+scale 600*600
+
+interface IComponent {}
+class Folder {
+    -IComponent[] components
+    add(component)
+    remove(component)
+}
+IComponent <|-- File
+IComponent <|-- Folder
+Folder o-- IComponent
+@enduml

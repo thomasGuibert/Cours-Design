@@ -1,0 +1,22 @@
+@startuml Observateur
+scale 600*600
+
+interface ISbuscriber{
+    wakeup()
+}
+
+class Gromit {
+    wakeup()
+}
+
+Class AlarmClock {
+    -ISbuscriber[] subscribers
+    subscribe(subscriber)
+    unsubscribe(subscriber)
+    notifySubscribers()
+}
+note bottom: foreach(s in subscribers) s.wakeup()
+
+AlarmClock o- ISbuscriber
+ISbuscriber <|.. Gromit
+@enduml

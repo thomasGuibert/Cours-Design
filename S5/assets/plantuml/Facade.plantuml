@@ -1,0 +1,13 @@
+@startuml Facade
+scale 600*600
+
+package nodejs {
+    package api
+    package crypto
+    package tracking
+    package dataqueue
+}
+
+
+CLI -> nodejs
+@enduml

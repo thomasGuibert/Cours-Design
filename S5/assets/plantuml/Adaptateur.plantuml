@@ -1,0 +1,20 @@
+@startuml Adaptateur
+scale 600*600
+
+class ExternalService{
+    string GetData()
+}
+
+interface IExternalServiceAdapter{
+    int GetData()
+}
+
+class Adapter {
+    - ExternalService _externalService
+    int GetData()
+}
+
+Client --> IExternalServiceAdapter
+IExternalServiceAdapter <|- Adapter
+Adapter o-- ExternalService
+@enduml

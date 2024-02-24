@@ -1,0 +1,11 @@
+@startuml Singleton
+scale 600*600
+
+class BankAccountService{
+    -BankAccountService _instance
+    -BankAccountService()
+    +BankAccountService GetInstance()
+    +DoBankAccountStuff()
+}
+note right: if(_instance == null) {\n_instance = new BankAccountService()\n}
+@enduml

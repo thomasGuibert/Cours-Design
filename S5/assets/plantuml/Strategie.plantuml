@@ -1,0 +1,36 @@
+@startuml Strategie
+scale 800*800
+
+class Bus {
+    moveTo(destination)
+}
+
+class Car {
+    moveTo(destination)
+}
+
+class Walk {
+    moveTo(destination)
+}
+
+interface ITranport {
+    moveTo(destination)
+}
+
+class Travelway {
+    -ITranport transport
+    setStrategy(tranport)
+    moveTo(destination)
+}
+
+class User {
+}
+note bottom: create the travelway.\nThen create and set the strategy.
+
+User -> Travelway
+Travelway o- ITranport
+ITranport <|-- Bus
+ITranport <|-- Car
+ITranport <|-- Walk
+
+@enduml

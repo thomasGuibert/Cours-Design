@@ -1,0 +1,29 @@
+@startuml Factory
+scale 600*600
+
+abstract class CookerFactory{
+    IOven CreateCooker()
+}
+
+class GasOvenFactory{
+    IOven CreateCooker()
+}
+class MicrowaveOvenFactory{
+    IOven CreateCooker()
+}
+interface IOven {
+    void cook()
+}
+class MicrowaveOven{
+    void cook()
+}
+class GasOven{
+    void cook()
+}
+CookerFactory <|-- GasOvenFactory
+CookerFactory <|-- MicrowaveOvenFactory
+IOven <|.. MicrowaveOven
+IOven <|.. GasOven
+GasOvenFactory --> GasOven
+MicrowaveOvenFactory --> MicrowaveOven
+@enduml

@@ -1,0 +1,39 @@
+@startuml Commande
+scale 600*600
+
+interface ICommand {
+    execute()
+}
+
+class LightOnSwitcherCommand {
+    -LightSwitcher _lightSwitcher
+    execute()
+}
+
+class LightOffSwitcherCommand {
+    -LightSwitcher _lightSwitcher
+    execute()
+}
+
+class LightSwitcher {
+    - lightStatus bolean
+    setLightStatus(status)
+}
+
+class Interupteur {
+    - ICommand
+    + setCommand(command)
+    + executeCommand()
+}
+
+class User {}
+note bottom: Créé la commande\net l'execute
+
+Interupteur --> ICommand
+ICommand <|.. LightOnSwitcherCommand
+ICommand <|.. LightOffSwitcherCommand
+LightOffSwitcherCommand --> LightSwitcher
+LightOnSwitcherCommand --> LightSwitcher
+User -> Interupteur
+
+@enduml

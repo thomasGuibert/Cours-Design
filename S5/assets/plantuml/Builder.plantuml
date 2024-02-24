@@ -1,0 +1,15 @@
+@startuml Builder
+scale 600*600
+
+class PizzaBuilder{
+    -string[] _currentIngerdients
+    +PizzaBuilder AddMushroom()
+    +PizzaBuilder AddPineapple()
+    +PizzaBuilder AddHam()
+    +PizzaBuilder AddChees()
+    +PizzaBuilder AddTomato()
+    +Pizza Build()
+}
+
+PizzaBuilder -> Pizza
+@enduml
