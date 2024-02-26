@@ -2,6 +2,6 @@
 scale 600*600
 hide footbox
 
-Emmeteur -> Destinataire: envoi(message)
+Emetteur -> Destinataire: envoi(message)
 
 @enduml
