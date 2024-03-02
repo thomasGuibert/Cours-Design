@@ -1,0 +1,76 @@
+@startuml classes
+
+interface IServiceDeVoyages{
+    + Voyage[] Recherche(CriteresDeRecherche recherche)
+}
+class ServiceDeVoyages{
+    + Voyage[] Recherche(CriteresDeRecherche recherche)
+}
+
+class LocalisationTemporelle {
+    Gare gare
+    Date date
+    Time heure
+}
+interface IReservable {
+    + Reservation()
+} 
+class Voyage {
+    LocalisationTemporelle depart
+    LocalisationTemporelle destination
+    
+    Trajet[] trajets
+    + Reservation()
+}
+
+class Trajet {
+    + Train train
+    + Place place
+    + Billet billet
+    + void Reservation()
+    - void ReservationPlace()
+    - void ReservationBillet()
+}
+
+interface IServiceDeReservation {
+    + void Reservation(ReservationInformation voyage)
+    - void EnvoieEmail(ReservationInformation voyage)
+}
+class ServiceDeReservation {
+    + void Reservation(ReservationInformation voyage)
+    - void EnvoieEmail(ReservationInformation voyage)
+}
+
+interface IServiceEmail {
+    + EnvoieEmail(ReservationInformation information)
+}
+class ServiceEmail {
+    + EnvoieEmail(ReservationInformation information)
+}
+
+interface IServiceDeFacturation {
+    + void CreerFacture(Facturationformation information)
+    + void EnvoieEmail(Facturationformation[] information)
+}
+class ServiceDeFacturation {
+    + void CreerFacture(Facturationformation information)
+    + void EnvoieEmail(Facturationformation[] information)
+}
+
+IServiceDeVoyages <|-- ServiceDeVoyages
+IReservable <|-- Voyage
+IReservable <|-- Trajet
+IServiceDeReservation <|-- ServiceDeReservation
+IServiceEmail <|-- ServiceEmail
+IServiceDeFacturation <|-- ServiceDeFacturation
+ServiceDeVoyages --> Voyage
+Voyage o-- LocalisationTemporelle
+Voyage o-- Trajet
+Trajet o-- Train
+Trajet o-- Place
+Trajet o-- Billet
+Voyage --> IServiceDeReservation
+ServiceDeReservation --> IServiceEmail
+ServiceDeReservation --> IServiceDeFacturation
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml activite
+
+(*) --> En attente de recherche
+--> Lecture de la recherche
+--> Récuperation des voyages disponible\ncorrespondant aux critères de recherche
+if "Liste des voyages" then
+--> [Pas de voyages]En attente de recherche
+else
+--> [Voyages]Présentation des voyages
+endif
+--> Selection d'un voyage
+--> Selection d'un train
+--> Selection d'une place
+--> Selection du type de billet
+if "A des correpondances" then
+--> [oui]Selection d'un train
+else
+--> [non]Réservation des places sélectionnées
+endif
+--> Génération de la facture
+--> Envoie de la facture
+--> (*)
+@enduml

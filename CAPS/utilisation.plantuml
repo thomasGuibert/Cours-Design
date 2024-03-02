@@ -1,0 +1,21 @@
+@startuml utilisation
+left to right direction
+
+actor Utilisateur as u
+actor Visiteur as v
+
+package "CAPS" {
+    usecase "Se connecter" as sc
+    usecase "Rechercher un train pour une certaine date et heure" as rect
+    usecase "Réserver un train pour une classe à une place choisie" as rest
+    usecase "Envoyer un email de facture mensuel" as ef
+    usecase "Envoyer un email de reservation" as er
+}
+u --|> v
+v --> sc
+v --> rect
+u --> rest
+CAPS --> ef
+CAPS --> er
+
+@enduml

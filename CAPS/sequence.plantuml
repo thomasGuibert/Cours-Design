@@ -1,0 +1,11 @@
+@startuml sequence
+
+-> Voyage : Reservation()
+loop pour chaque trajet
+Voyage -> Trajet : Reservation()
+end
+Voyage -> ServiceDeReservation : Reservation(ReservationInformation voyage)
+ServiceDeReservation -> ServiceDeFacturation : CreerFacture(Facturationformation information)
+ServiceDeReservation -> ServiceEmail : EnvoieEmail(ReservationInformation information)
+
+@enduml
