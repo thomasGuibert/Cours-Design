@@ -34,6 +34,29 @@
  ![image](./S1/src/assets/ProductivityByRelease.webp)
 
 ---
+ # Cas d'utilisation
+```plantuml
+@startuml
+scale 400*400
+left to right direction
+actor Guest as g
+package Professional {
+  actor Chef as c
+  actor "Food Critic" as fc
+}
+package Restaurant {
+  usecase "Eat Food" as UC1
+  usecase "Pay for Food" as UC2
+  usecase "Drink" as UC3
+  usecase "Review" as UC4
+}
+fc --> UC4
+g --> UC1
+g --> UC2
+g --> UC3
+@enduml
+```
+---
 
  # Raisons de la faible qualité des logiciels
 * Tâche complexe
