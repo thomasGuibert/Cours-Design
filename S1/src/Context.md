@@ -1,46 +1,46 @@
 
- ---
+---
 
 # Contexte
- ---
+---
 
  ![image](./assets/everything-is-fine-itsfine.gif)
 
- ---
+---
 # Taux de réussite
 
 ![image](./assets/chaosreport.png)
 
- ---
+---
 
   # Besoin client
  ![image](./assets/gestion_projet_balancoire.jpg)
 
- ---
+---
 
 # Usage
 ![image](./assets/fonctionnalités.png)
 
- ---
+---
  # Temps
 ![image](./assets/NOTime.jfif)
 
- ---
+---
  # Coût de la qualité
  ![image](./assets/CostOfDefect.webp)
 
- ---
+---
   # Evolution de la performance
  ![image](./assets/ProductivityByRelease.webp)
 
- ---
+---
 
  # Raisons de la faible qualité des logiciels
 * Tâche complexe
 * Manque de méthodes et de rigueur
 * Mauvaise compréhension des besoins
 
- ---
+---
  # Critères de qualité
 * Validité : réponse aux besoins des utilisateurs
 * **Maintenabilité** : facilité à corriger ou transformer le logiciel
@@ -56,13 +56,13 @@
 * Schéma de conception (Tactique)
 * Algorithmique
 
- ---
+---
  # Organisation de l'entreprise
 
 **Loi de conway**:
  _les organisations créent des systèmes à l’image de leurs propres structures de communication_
 
- ---
+---
  # Architectures logiciel
 
 * Communication entre les systèmes
