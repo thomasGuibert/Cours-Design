@@ -8,7 +8,30 @@ Un client souhaite créer une application permettant aux abonnés de partager le
 
 ## Exercie
 
-* Modélisez le besoin du client via un diagramme de cas d'ulisation
+* Modélisez le besoin du client via un diagramme de cas d'ulisation (4pts)
++1 si acteur
++1 si heritage
++1 si use case
++1 si tous les use cases
+
 * Présentez le diagramme d'activité d'une salle de musique depuis sa création jusqu'à sa destruction
++1 si état
++1 si conditions
++1 si gestion de la destruction
++1 si gestion de l'ajout de musique par un utilisateur
++1 coherence
++1 lisibilité
+
 * Modélisez le diagramme de classe du système
++1 si classes
++1 si methodes
++1 coherence
++1 lisibilité
++1 si abstraction (heritage, interface)
++1 validation musique
+
 * Modélisez, via un diagramme de séquence, un utilsateur qui se connecte pour ajouter une musique dans une salle
++1 classe
++1 methode
++1 lisibilité
++1 coherence
