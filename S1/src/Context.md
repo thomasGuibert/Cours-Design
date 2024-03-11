@@ -4,34 +4,34 @@
 # Contexte
 ---
 
- ![image](./assets/everything-is-fine-itsfine.gif)
+ ![image](./S1/src/assets/everything-is-fine-itsfine.gif)
 
 ---
 # Taux de réussite
 
-![image](./assets/chaosreport.png)
+![image](./S1/src/assets/chaosreport.png)
 
 ---
 
   # Besoin client
- ![image](./assets/gestion_projet_balancoire.jpg)
+ ![image](./S1/src/assets/gestion_projet_balancoire.jpg)
 
 ---
 
 # Usage
-![image](./assets/fonctionnalités.png)
+![image](./S1/src/assets/fonctionnalités.png)
 
 ---
  # Temps
-![image](./assets/NOTime.jfif)
+![image](./S1/src/assets/NOTime.jfif)
 
 ---
  # Coût de la qualité
- ![image](./assets/CostOfDefect.webp)
+ ![image](./S1/src/assets/CostOfDefect.webp)
 
 ---
   # Evolution de la performance
- ![image](./assets/ProductivityByRelease.webp)
+ ![image](./S1/src/assets/ProductivityByRelease.webp)
 
 ---
 
