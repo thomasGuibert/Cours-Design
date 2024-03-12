@@ -17,7 +17,7 @@ if "A des correpondances" then
 else
 --> [non]Réservation des places sélectionnées
 endif
---> Génération de la facture
---> Envoie de la facture
+--> Génération de la réservation
+--> Envoie de la réservation
 --> (*)
 @enduml
