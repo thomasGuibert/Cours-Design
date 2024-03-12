@@ -12,10 +12,31 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="doc/plugin/highlight/monokai.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section>
+					<h2>Diagram in Markdown</h2>
+					<pre>
+					  <code class="language-html">&ltsection data-markdown>
+				&lttextarea data-template>
+				## Diagram in Markdown
+			
+				```plantuml
+				@startuml
+				
+				Alice -> Bob: Authentication Request
+				Bob --> Alice: Authentication Response
+				Alice -> Bob: Another authentication Request
+				Alice <-- Bob: Another authentication Response
+				@enduml
+				```
+				&lt/textarea>
+			&lt/section></code>
+					</pre>
+				  </section>
 				<section data-markdown="S1/src/Context.md"></section>
 				<section>Slide 1</section>
 				<section>Slide 4</section>
@@ -32,15 +53,14 @@
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
-				dependencies: [
-    				{ src: '//cdn.jsdelivr.net/npm/reveal-plantuml' },
-  				]
-			});
+			Reveal.initialize({
+			dependencies: [
+				{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/markdown/marked.js' },
+				{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/markdown/markdown.js' },
+				{ src: '//cdn.jsdelivr.net/npm/reveal-plantuml' },
+			]
+    });
 		</script>
 	</body>
 </html>
